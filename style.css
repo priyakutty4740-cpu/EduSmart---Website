@@ -1,71 +1,214 @@
-body {
-    font-family: Arial, sans-serif;
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
-    background: #f4f7fb;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f9fa;
     color: #333;
 }
 
-header {
-    background: #4a90e2;
-    color: white;
-    padding: 15px;
-    text-align: center;
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e293b;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
+.navbar .logo {
+    color: #fff;
+    font-size: 24px;
     font-weight: bold;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.navbar ul {
+    display: flex;
+    list-style: none;
 }
 
+.navbar ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #fff;
+    background-color: #3b82f6;
+    border-radius: 5px;
+}
+
+.menu-btn {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+#click {
+    display: none;
+}
+
+/* Sections Common Styles */
 section {
-    padding: 40px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
-button {
-    background: #4a90e2;
+/* Hero / Home Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #2563eb;
+}
+
+/* About Section */
+.about-section {
+    background-color: #fff;
+}
+
+.about-section h2, .contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+/* Contact Section & Form */
+.contact-section {
+    background-color: #f1f5f9;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 30px auto 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #3b82f6;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e293b;
     color: white;
     border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background: #357abd;
-}
-
-form {
-    max-width: 400px;
-    margin: auto;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 30px;
+.btn-submit:hover {
+    background-color: #3b82f6;
 }
+
+/* Footer */
+footer {
+    background-color: #1e293b;
+    color: #64748b;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Responsive Styles for Mobile Phone */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+    #click:checked ~ ul {
+        left: 0;
+    }
+    .navbar ul {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        background: #1e293b;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .navbar ul li {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .navbar ul li a {
+        width: 100%;
+        display: block;
+        font-size: 20px;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
+
