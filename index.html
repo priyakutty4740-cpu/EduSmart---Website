@@ -3,50 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduSmart</title>
+    <title>EduSmart - Learning Platform</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons for Menu -->
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
-<header>
-    <h1>EduSmart</h1>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">EduSmart</div>
+        <!-- Hamburger Menu Icon for Mobile -->
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
-</header>
 
-<section id="home">
-    <h2>Welcome to EduSmart</h2>
-    <p>Learn smarter with free courses, quizzes and study materials.</p>
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to EduSmart</h1>
+            <p>Your Smart Companion for Digital Learning and Success.</p>
+            <a href="#about" class="btn">Start Learning</a>
+        </div>
+    </section>
 
-    <button onclick="showMessage()">Start Learning</button>
-</section>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <div class="about-container">
+            <p>EduSmart is an innovative educational platform designed to make learning accessible, engaging, and effective for everyone. We bridge the gap between students and quality knowledge through modern tech tools.</p>
+        </div>
+    </section>
 
-<section id="about">
-    <h2>About Us</h2>
-    <p>
-        EduSmart is an educational website designed to help students
-        learn programming, improve their skills, and practice with quizzes.
-    </p>
-</section>
+    <!-- Contact Section with Interactive Form -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to us anytime!</p>
+        
+        <!-- Interactive Feature: Contact Form -->
+        <form class="contact-form" action="#" method="POST" onsubmit="alert('Thank you! Your message has been sent successfully.'); return false;">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </section>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-
-    <form>
-        <input type="text" placeholder="Your Name" required><br><br>
-
-        <input type="email" placeholder="Your Email" required><br><br>
-
-        <textarea placeholder="Your Message" rows="5" required></textarea><br><br>
-
-        <button type="submit">Send</button>
-    </form>
-</section>
-
-<script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 EduSmart. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
