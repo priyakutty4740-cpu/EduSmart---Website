@@ -3,36 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduSmart Courses</title>
+    <title>EduSmart</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>EduSmart Courses</h1>
+    <h1>EduSmart</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<section style="text-align:center; padding:40px;">
-    <h2>Choose a Course</h2>
-    <p>Start learning with our free courses.</p>
+<section id="home">
+    <h2>Welcome to EduSmart</h2>
+    <p>Learn smarter with free courses, quizzes and study materials.</p>
 
-    <div style="margin-top:30px;">
-        <h3>📘 HTML Basics</h3>
-        <p>Learn the structure of web pages.</p>
-
-        <h3>🎨 CSS Fundamentals</h3>
-        <p>Design beautiful websites.</p>
-
-        <h3>⚡ JavaScript Essentials</h3>
-        <p>Make your website interactive.</p>
-    </div>
-
-    <br><br>
-
-    <button onclick="window.location.href='index.html'">
-        ⬅ Back to Home
-    </button>
+    <button onclick="showMessage()">Start Learning</button>
 </section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        EduSmart is an educational website designed to help students
+        learn programming, improve their skills, and practice with quizzes.
+    </p>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required><br><br>
+
+        <input type="email" placeholder="Your Email" required><br><br>
+
+        <textarea placeholder="Your Message" rows="5" required></textarea><br><br>
+
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
