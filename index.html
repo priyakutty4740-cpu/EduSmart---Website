@@ -1,73 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduSmart - Learning Platform</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome Icons for Menu -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduSmart</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">EduSmart</div>
-        <!-- Hamburger Menu Icon for Mobile -->
-        <input type="checkbox" id="click">
-        <label for="click" class="menu-btn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<header>
+  <nav>
+    <h1>EduSmart</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- Home Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1>Welcome to EduSmart</h1>
-            <p>Your Smart Companion for Digital Learning and Success.</p>
-            <!-- BUTTON LINK FIXED: இங்கிருக்கும் #about கீழே உள்ள செக்ஷனுடன் இணைக்கப்பட்டுள்ளது -->
-            <a href="#about" class="btn">Start Learning</a>
-        </div>
-    </section>
+<section class="hero">
+  <h2>Learn Anytime, Anywhere</h2>
+  <p>Upgrade your skills with free online courses.</p>
+  <a href="courses.html" class="btn">Start Learning</a>
+</section>
 
-    <!-- About Section -->
-    <!-- SECTION ID FIXED: இங்கிருக்கும் id="about" பட்டனுடன் சரியாக இணைக்கப்பட்டுள்ளது -->
-    <section id="about" class="about-section">
-        <h2>About Us</h2>
-        <div class="about-container">
-            <p>EduSmart is an innovative educational platform designed to make learning accessible, engaging, and effective for everyone. We bridge the gap between students and quality knowledge through modern tech tools.</p>
-        </div>
-    </section>
+<section id="about">
+  <h2>About EduSmart</h2>
+  <p>
+    EduSmart is an online learning platform designed to help students
+    improve their knowledge through simple and interactive courses.
+  </p>
+</section>
 
-    <!-- Contact Section with Interactive Form -->
-    <section id="contact" class="contact-section">
-        <h2>Contact Us</h2>
-        <p>Have questions? Reach out to us anytime!</p>
-        
-        <!-- Interactive Feature: Contact Form -->
-        <form class="contact-form" action="#" method="POST" onsubmit="alert('Thank you! Your message has been sent successfully.'); return false;">
-            <div class="form-group">
-                <input type="text" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-                <input type="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Send Message</button>
-        </form>
-    </section>
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: support@edusmart.com</p>
+  <p>Phone: +91 9876543210</p>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 EduSmart. All Rights Reserved.</p>
-    </footer>
+<footer>
+  <p>&copy; 2026 EduSmart. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
